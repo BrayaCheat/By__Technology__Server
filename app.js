@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 3000
 const route = require('./src/Routes/postRoute')
 const cors = require('cors')
 
@@ -14,6 +14,6 @@ app.use('/BYAPI/v1', route)
 require('./src/utility/database')
 
 //Port Listen
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log(`Server is running on port ${port}`)
 })
