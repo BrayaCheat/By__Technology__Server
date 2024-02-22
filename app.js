@@ -9,6 +9,10 @@ app.use(express.json())
 app.use(express.static('public'))
 app.use('/BYAPI/v1', route)
 
+app.get('/', (req, res) => {
+    res.send("Braya's server")
+})
+
 
 //Initialize MongoDB
 require('./src/utility/database')
